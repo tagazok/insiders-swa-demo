@@ -1,24 +1,34 @@
-<h1>Your Todos</h1>
-<pre>{{userService.isLogged()}}</pre>
-<a *ngIf="!userService.isLogged()" class="btn" href="/.auth/login/github">LOG IN</a>
-<div *ngIf="userService.isLogged()">
-    {{userService.user?.userDetails}}
-    <pre>
-        {{userService.user?.details |json}}
-    </pre>
-    <a class="btn" href="/.auth/login/github">LOGOUT</a>
+<nav class="nav" *ngIf="userService.isLogged()">
+    <div class="title">TODO</div>
+    <div class="login">Hi, Olivier</div>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/2637742?v=4" alt="avatar" />
+    <button class="blue">Logout</button>
+</nav>
+
+<div *ngIf="!userService.isLogged()">
+    <a class="btn" href="/.auth/login/github">LOG IN</a>
 </div>
-<table>
-    <thead> 
-        <tr>
-            <th>Todo</th>
-            <th>Complete</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let todo of todos">
-            <td>{{todo.Title}}</td>
-            <td><input type="checkbox" checked="{{todo.Complete}}" readonly></td>
-        </tr>
-    </tbody>
-</table>
+
+<div class="content" *ngIf="userService.isLogged()">
+    <div *ngIf="userService.isLogged()">
+        {{userService.user?.userDetails}}
+        <pre>
+            {{userService.user?.details |json}}
+        </pre>
+        <a class="btn" href="/.auth/login/github">LOGOUT</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Todo</th>
+                <th>Complete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.Title}}</td>
+                <td><input type="checkbox" checked="{{todo.Complete}}" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

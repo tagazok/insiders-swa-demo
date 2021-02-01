@@ -10,3 +10,53 @@ table tr th{
 table tr td{
     text-align: center;
 }
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 48px;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: .5em;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+
+    .title {
+        flex: 1;
+    }
+
+    .avatar {
+        height: 100%;
+        border-radius: 50%;
+        border: solid 1px #fff;
+        margin: 0 1em;
+    }
+}
+
+button {
+    background-color: #e7e7e7; 
+    color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    &.green {
+        background-color: #4caf50;
+        color: white
+    }
+
+    &.red {
+        background-color: #f44336;
+        color: white;
+    }
+
+    &.blue {
+        background-color: #008cba;
+        color: white;
+    }
+}
