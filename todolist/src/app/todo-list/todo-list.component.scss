@@ -46,15 +46,29 @@ table tr td{
 
 .content {
     margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .card {
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+        border: solid 1px #e6e6e6;
+        margin-top: 3em;
+        box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
 
+        .card-header {
+            color: #4d4d4d;
+        }
         .list-item {
-            width: 800px;
+            // width: 800px;
             max-width: 100%;
+            padding: .5em;
 
             .title {
-                color: blue;
+                color: #4d4d4d;
+                margin-left: .5em;
             }
         }
     }

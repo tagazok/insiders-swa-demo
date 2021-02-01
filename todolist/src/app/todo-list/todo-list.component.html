@@ -16,6 +16,9 @@
 
 <div class="content" *ngIf="userService.isLogged()">
     <div class="card">
+        <h2 class="card-header">
+            TODO
+        </h2>
         <div *ngFor="let todo of todos" class="list-item">
             <input type="checkbox" checked="{{todo.Complete}}" readonly>
             <div class="title">{{todo.Title}}</div>
