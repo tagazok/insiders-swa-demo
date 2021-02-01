@@ -2,7 +2,7 @@
     <div class="title">TODO</div>
     <div class="login">Hi, {{userService.user?.details.login}}</div>
     <img class="avatar" [src]="userService.user?.details.avatar_url" alt="avatar" />
-    <a class="btn blue" href="/.auth/login/github">LOGOUT</a>
+    <a class="btn blue" href="/.auth/logout">LOGOUT</a>
 </nav>
 
 <div class="login" *ngIf="!userService.isLogged()">
