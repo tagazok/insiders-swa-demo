@@ -9,16 +9,19 @@ import { TodoService } from '../todo.service';
 })
 export class TodoListComponent implements OnInit {
 
-  todos: any;
+  todos: any = [];
   constructor(private todoService: TodoService,
     public userService: AuthSWAService
     ) {}
  
   ngOnInit(): void {
-    this.todoService.getTodoList().then((response) => response.json()).then(data =>{
-       this.todos = data;
-       console.log(data);
-    });
+    try {
+      this.todoService.getTodoList().then((response) => response.json()).then(data =>{
+        this.todos = data;
+        console.log(data);
+     });
+    } catch (error) {
+      console.log(error);
+    }
   }
-
 }

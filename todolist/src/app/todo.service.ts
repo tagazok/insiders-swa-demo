@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 export class TodoService {
 
   getTodoList() {
-    return fetch('api/GetTodoList');
+    try {
+      return fetch('api/GetTodoList');
+    } catch (error) {
+      throw new Error(error);
+    } 
   }
 }
