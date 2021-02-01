@@ -48,11 +48,14 @@ table tr td{
     margin-top: 1em;
 
     .card {
-        width: 800px;
-        max-width: 100%;
-        
-        .title {
-            color: blue;
+
+        .list-item {
+            width: 800px;
+            max-width: 100%;
+
+            .title {
+                color: blue;
+            }
         }
     }
 }
