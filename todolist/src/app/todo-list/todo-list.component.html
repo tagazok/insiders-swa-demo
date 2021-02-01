@@ -6,8 +6,13 @@
     <a class="btn blue" href="/.auth/login/github">LOGOUT</a>
 </nav>
 
-<div class="center" *ngIf="!userService.isLogged()">
-    <a class="btn blue" href="/.auth/login/github">LOG IN</a>
+<div class="login" *ngIf="!userService.isLogged()">
+    <div>
+        <img src="assets/github-logo.png" alt="Logo github" />
+    </div>
+    <div>
+        <a class="btn blue" href="/.auth/login/github">LOG IN WITH GITHUB</a>
+    </div>
 </div>
 
 <div class="content" *ngIf="userService.isLogged()">

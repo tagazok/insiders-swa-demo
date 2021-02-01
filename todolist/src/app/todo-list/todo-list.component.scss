@@ -34,9 +34,14 @@ table tr td{
     }
 }
 
-.center {
+.login {
     text-align: center;
     margin: 5em 0;
+
+    img {
+        width: 50px;
+        max-width: 100%;
+    }
 }
 
 .content {
