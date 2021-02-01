@@ -24,6 +24,18 @@ table tr td{
 
     .title {
         flex: 1;
+        display: flex;
+        font-size: 2em;
+
+        .logo {
+            color: #5bd1f7;
+        }
+
+        .appname {
+            display: flex;
+            align-items: center;
+            margin-left: .5em;
+        }
     }
 
     .avatar {
