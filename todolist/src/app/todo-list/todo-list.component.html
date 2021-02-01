@@ -1,22 +1,16 @@
 <nav class="nav" *ngIf="userService.isLogged()">
     <div class="title">TODO</div>
-    <div class="login">Hi, Olivier</div>
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/2637742?v=4" alt="avatar" />
+    <div class="login">Hi, {{userService.user?.details.login}}</div>
+    <img class="avatar" [src]="userService.user?.details.avatar_url" alt="avatar" />
     <button class="blue">Logout</button>
+    <a class="btn blue" href="/.auth/login/github">LOGOUT</a>
 </nav>
 
-<div *ngIf="!userService.isLogged()">
-    <a class="btn" href="/.auth/login/github">LOG IN</a>
+<div class="center" *ngIf="!userService.isLogged()">
+    <a class="btn blue" href="/.auth/login/github">LOG IN</a>
 </div>
 
 <div class="content" *ngIf="userService.isLogged()">
-    <div *ngIf="userService.isLogged()">
-        {{userService.user?.userDetails}}
-        <pre>
-            {{userService.user?.details |json}}
-        </pre>
-        <a class="btn" href="/.auth/login/github">LOGOUT</a>
-    </div>
     <table>
         <thead>
             <tr>
