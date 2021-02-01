@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Node Functions",
+            "type": "node",
+            "runtimeArgs": [
+                "--version"
+              ],
+            "runtimeVersion": "v10.14.1",
+            "request": "attach",
+            "port": 9229,
+            "preLaunchTask": "func: host start"
+        }
+    ]
+}
