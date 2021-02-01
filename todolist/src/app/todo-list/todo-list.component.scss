@@ -52,19 +52,31 @@ table tr td{
 
     .card {
         display: flex;
-        flex-direction: row;
-        padding: 2em;
+        flex-direction: column;
         border: solid 1px #e6e6e6;
         margin-top: 3em;
         box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
 
+        h2 {
+            margin: 0;
+        }
+
         .card-header {
             color: #4d4d4d;
+            padding: 2em;
+            border-bottom: solid 1px #e6e6e6;
         }
+
+        .card-content {
+            padding: 2em;
+        }
+
         .list-item {
             // width: 800px;
             max-width: 100%;
             padding: .5em;
+            display; flex;
+            flex-direction: row;
 
             .title {
                 color: #4d4d4d;

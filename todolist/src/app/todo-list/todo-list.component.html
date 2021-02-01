@@ -16,13 +16,15 @@
 
 <div class="content" *ngIf="userService.isLogged()">
     <div class="card">
-        <h2 class="card-header">
+        <h2>
             TODO
         </h2>
-        <div *ngFor="let todo of todos" class="list-item">
-            <input type="checkbox" checked="{{todo.Complete}}" readonly>
-            <div class="title">{{todo.Title}}</div>
-        </div> 
+        <div class="card-content">
+            <div *ngFor="let todo of todos" class="list-item">
+                <input type="checkbox" checked="{{todo.Complete}}" readonly>
+                <div class="title">{{todo.Title}}</div>
+            </div> 
+        </div>
     </div>
 
     <!-- <table>
