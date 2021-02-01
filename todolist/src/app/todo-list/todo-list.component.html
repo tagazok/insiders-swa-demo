@@ -15,7 +15,14 @@
 </div>
 
 <div class="content" *ngIf="userService.isLogged()">
-    <table>
+    <div class="card">
+        <div *ngFor="let todo of todos" class="list-item">
+            <input type="checkbox" checked="{{todo.Complete}}" readonly>
+            <div class="title">{{todo.Title}}</div>
+        </div> 
+    </div>
+
+    <!-- <table>
         <thead>
             <tr>
                 <th>Todo</th>
@@ -25,8 +32,8 @@
         <tbody>
             <tr *ngFor="let todo of todos">
                 <td>{{todo.Title}}</td>
-                <td><input type="checkbox" checked="{{todo.Complete}}" readonly></td>
+                <td></td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
 </div>

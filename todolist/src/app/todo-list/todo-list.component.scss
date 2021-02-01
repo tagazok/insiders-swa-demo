@@ -46,6 +46,15 @@ table tr td{
 
 .content {
     margin-top: 1em;
+
+    .card {
+        width: 800px;
+        max-width: 100%;
+        
+        .title {
+            color: blue;
+        }
+    }
 }
 
 .btn {
