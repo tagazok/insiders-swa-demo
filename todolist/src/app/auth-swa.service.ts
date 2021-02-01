@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class AuthSWAService {
   user: any = null;
-  constructor() { }
+  constructor() { 
+    this.getUser();
+  }
 
   async getUser() {
     try {
