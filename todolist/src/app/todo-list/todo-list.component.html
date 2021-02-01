@@ -1,0 +1,15 @@
+<h1>Your Todos</h1>
+<table>
+    <thead> 
+        <tr>
+            <th>Todo</th>
+            <th>Complete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.Title}}</td>
+            <td><input type="checkbox" checked="{{todo.Complete}}" readonly></td>
+        </tr>
+    </tbody>
+</table>
