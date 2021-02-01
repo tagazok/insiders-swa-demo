@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthSWAService } from '../auth-swa.service';
 import { TodoService } from '../todo.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { TodoService } from '../todo.service';
 export class TodoListComponent implements OnInit {
 
   todos: any;
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService,
+    public userService: AuthSWAService
+    ) {}
  
   ngOnInit(): void {
     this.todoService.getTodoList().then((response) => response.json()).then(data =>{
