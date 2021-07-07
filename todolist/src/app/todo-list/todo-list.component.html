@@ -1,7 +1,7 @@
 <nav class="nav" *ngIf="userService.isLogged()">
     <div class="title">
         <div class="logo">☑</div>
-        <div class="appname">TODO</div>
+        <div class="appname">TODoux</div>
     </div>
     <div class="login">Hi, {{userService.user?.details?.login}}</div>
     <img class="avatar" [src]="userService.user?.details?.avatar_url" alt="avatar" />
